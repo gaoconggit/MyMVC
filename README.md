@@ -28,16 +28,25 @@ HttpHandler。
 
 
 配置：
- <system.webServer>
+
+    <system.webServer>
     <validation validateIntegratedModeConfiguration="false"/>
     <modules>
-     
-
       <remove name="ServerHttpModule"/>
       <add name="ServerHttpModule" type="MyWebFrameWork.HttpModule.ServerHttpModule,MyWebFrameWork"/>
-      
     </modules>
-  </system.webServer>
+    </system.webServer>
 
   使用：
   添加以Server结尾的类。使用方法和asp.net mvc一样了。
+
+  c#类
+
+    public class HomeServer
+      {
+          public string Index(Student stu)
+          {
+              JavaScriptSerializer js = new JavaScriptSerializer();
+              return js.Serialize(stu);
+          }
+      }
