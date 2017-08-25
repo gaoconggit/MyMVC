@@ -1,7 +1,7 @@
 ## 一、注：
-1.服务的要求是一个C#类
-2.服务以Server结尾
-3.访问时Server可以省略,如HomeServer,访问时可写为Home
+### 1.服务的要求是一个C#类
+### 2.服务以Server结尾
+### 3.访问时Server可以省略,如HomeServer,访问时可写为Home
 
 原理：
 Web框架基于asp.net管线机制,用HttpModule注册了
@@ -18,8 +18,8 @@ HttpHandler。
 
 功能还不完善。只有基础功能。
 
-1.视图引擎没有
-2.action缓存没写
+### 1.视图引擎没有
+### 2.action缓存没写
 .......
 
 
