@@ -5,13 +5,10 @@
 #### 2.服务以Server结尾
 #### 3.访问时Server可以省略,如HomeServer,访问时可写为Home
 
-原理：
-
-    Web框架基于asp.net管线机制,用HttpModule注册了HttpApplicationr的PostResolveRequestCache事件。 
-    当PostResolveRequestCache事件触发时,走HttpModule方法中定义的方法。
-    HttpModule为一个简单的路由,解析/*Server/*类似规则的url。找到了就分配对应的
-    HttpHandler。
-
+### 原理：
+  `Web框架基于asp.net管线机制,用HttpModule注册了HttpApplicationr的PostResolveRequestCache事件`
+  `当PostResolveRequestCache事件触发时,走HttpModule方法中定义的方法。`
+  `HttpModule为一个简单的路由,解析/*Server/*类似规则的url。找到了就分配对应的HttpHandler。`
 ## 二、匹配对应的方法：
 * 1.用一个静态构造方法和一个静态字典缓存以Server结尾的类型信息。
 ## 三、调对应的后台方法
